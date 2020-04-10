@@ -39,4 +39,19 @@
             $this->session->set_flashdata('food','deleted');
             redirect('food');
         }
+        public function update($id) {
+            $data['title'] = 'Update Food';
+            $this->form_validation->set_rules('fname','Food Name','required');
+            $this->form_validation->set_rules('fserving','Food Serving','required');
+            $this->form_validation->set_rules('fcalori','Food Calori','required|numeric');
+            if($this->form_validation->run() == FALSE)  {
+                $this->load->view('templetes/header',$data);
+                $this->load->view('food/update');
+                $this->load->view('templetes/footer');
+            }else{
+                $this->Food_model->updateFood($id);
+                $this->session->set_flashdata('food','Updated');
+                redirect('food');
+            }
+        }
     }

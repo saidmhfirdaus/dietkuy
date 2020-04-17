@@ -5,7 +5,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    Update Food
+                    Create Discussion
                 </div>
                 <div class="card-body">
                     <?php if (validation_errors()) : ?>
@@ -14,20 +14,16 @@
                     <?php endif; ?>
                     <form action="" method="POST">
                         <div class="form-group">
-                            <label for="food">Food Name</label>
-                            <input type="text" name="fname" class="form-control" id="fname">
+                            <label for="title">Title</label>
+                            <input type="text" name="ftitle" class="form-control" id="ftitle">
                         </div>
 
 
                         <div class="form-group">
-                            <label for="serving">Food serving</label>
-                            <input type="text" name="fserving" class="form-control" id="fserving">
+                            <label for="desc">Description</label>
+                            <input type="text" name="fdesc" class="form-control" id="fdesc">
                         </div>
-                        <div class="form-group">
-                            <label for="calori">Food Calori (per serving)</label>
-                            <input type="text" name="fcalori" class="form-control" id="fcalori">
-                        </div>
-                        <button type="submit" name="add" class="btn btn-primary float-right">Update Food</button>
+                        <button type="submit" name="add" class="btn btn-primary float-right">Create</button>
                     </form>
 
                 </div>

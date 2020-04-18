@@ -32,6 +32,8 @@
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="<?= base_url(); ?>food">Food</a>
         <a class="nav-item nav-link" href="<?= base_url(); ?>forum">Diet Forum</a>
+        <a class="nav-item nav-link" href="<?= base_url(); ?>profil">Profil</a>
+        
       </div>
     </div>
   </nav>

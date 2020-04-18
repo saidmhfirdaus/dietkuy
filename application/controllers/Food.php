@@ -9,7 +9,7 @@
         }
 
         public function index() {
-            
+            $data['user'] = $this->db->get_where('user',['email'=> $this->session->userdata('email')])->row_array();            
             $data['title'] = 'Food';
             $data['food'] = $this->Food_model->getAllFood();
             $this->load->view('templetes/header',$data);
@@ -19,6 +19,7 @@
 
         public function add() {
             $data['title'] = 'Add Food';
+            $data['user'] = $this->db->get_where('user',['email'=> $this->session->userdata('email')])->row_array();
             $this->form_validation->set_rules('fname','Food Name','required');
             $this->form_validation->set_rules('fserving','Food Serving','required');
             $this->form_validation->set_rules('fcalori','Food Calori','required|numeric');
@@ -41,6 +42,7 @@
         }
         public function update($id) {
             $data['title'] = 'Update Food';
+            $data['user'] = $this->db->get_where('user',['email'=> $this->session->userdata('email')])->row_array();
             $this->form_validation->set_rules('fname','Food Name','required');
             $this->form_validation->set_rules('fserving','Food Serving','required');
             $this->form_validation->set_rules('fcalori','Food Calori','required|numeric');

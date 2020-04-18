@@ -37,7 +37,7 @@ class Home extends CI_Controller
                         'role_id' => $user['role_id']
                     ];
                     $this->session->set_userdata($data);
-                    redirect(food);
+                    redirect('food');
                     
                 }else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong Password!</div>');
@@ -87,4 +87,13 @@ class Home extends CI_Controller
             redirect('home');
         }
     }
+    
+    public function logout()
+    {
+        $this->session->unset_userdata('email');
+        $this->session->unset_userdata('role_id');
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">You have been logout!</div>');
+        redirect('home');
+    }
+    
 }

@@ -31,9 +31,7 @@
 
                                 </form>
                                 <hr>
-                                <div class="text-center">
-                                    <a class="small" href="<?= base_url('home/registrasi')  ?>">Forgot Password?</a>
-                                </div>
+                                
                                 <div class="text-center">
                                     <a class="small" href="<?= base_url('home/registration')  ?>">Create an Account!</a>
                                 </div>

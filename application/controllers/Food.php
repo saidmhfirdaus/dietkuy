@@ -42,7 +42,6 @@
         }
         public function update($id) {
             $data['title'] = 'Update Food';
-            $data['user'] = $this->db->get_where('user',['email'=> $this->session->userdata('email')])->row_array();
             $this->form_validation->set_rules('fname','Food Name','required');
             $this->form_validation->set_rules('fserving','Food Serving','required');
             $this->form_validation->set_rules('fcalori','Food Calori','required|numeric');

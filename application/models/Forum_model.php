@@ -19,4 +19,19 @@ class Forum_model extends CI_Model
         $this->db->where('id', $id);
         $this->db->get('forum')->result_array();
     }
+    public function deleteForum($id)
+    {
+        $this->db->where('id',$id);
+        $this->db->delete('forum');
+    }
+    public function updateForum($id)
+    {   
+        $data = [
+            "title" => $this->input->post('title',true),
+            "desc" => $this->input->post('desc',true)
+        ];
+        $this->db->where('id',$id);
+        $this->db->update('forum',$data);
+    }
+    
 }

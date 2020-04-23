@@ -5,7 +5,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    Create Discussion
+                    Update Forum
                 </div>
                 <div class="card-body">
                     <?php if (validation_errors()) : ?>
@@ -15,15 +15,16 @@
                     <form action="" method="POST">
                         <div class="form-group">
                             <label for="title">Title</label>
-                            <input type="text" name="ftitle" class="form-control" id="ftitle">
+                            <input type="text" name="title" class="form-control" id="title" value="<?= set_value('title') ?>">
                         </div>
 
 
                         <div class="form-group">
                             <label for="desc">Description</label>
-                            <input type="text" name="fdesc" class="form-control" id="fdesc">
+                            <textarea name="desc" class="form-control" id="desc"></textarea>
                         </div>
-                        <button type="submit" name="add" class="btn btn-primary float-right">Create</button>
+                        
+                        <button type="submit" name="add" class="btn btn-primary float-right">Update Forum</button>
                     </form>
 
                 </div>

@@ -1,7 +1,7 @@
 <div class="container">
 
     <div class="row mt-3">
-        <div class="col-md-6 mx-auto">
+        <div class="col-md-6 mx-auto"style="margin: auto">
 
             <div class="card">
                 <div class="card-header">

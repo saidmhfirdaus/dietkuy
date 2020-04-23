@@ -28,15 +28,19 @@
                     <th scope="col">No</th>
                     <th scope="col">Title</th>
                     <th scope="col"></th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
+                <?php $no = 1; ?>
                 <?php foreach ($forum as $fd) : ?>
                     <tr>
 
-                        <td><?= $fd['id']; ?></td>
+                        <td><?= $no ?></td>
+                        <?php $no = $no + 1 ?>
                         <td><?= $fd['title']; ?></td>
-                        <td><a style="margin: 3px" href="<?= base_url(); ?>forum/desc/<?= $fd['id']; ?>" class="badge badge-success float-left">Check it out</a></td>
+                        <td><?= $fd['desc']; ?></td>
+                        <td><a style="margin: 3px" href="<?= base_url(); ?>forum/update/<?= $fd['id'];?>" class="badge badge-success float-left" onclick="return confirm('are you sure ?');">Update</a><a style="margin: 3px" href="<?= base_url(); ?>forum/delete/<?= $fd['id'] ;?>" class="badge badge-danger float-left" onclick="return confirm('are you sure ?');">Delete</a> </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

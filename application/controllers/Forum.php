@@ -42,4 +42,23 @@ class Forum extends CI_Controller
         $this->load->view('forum/desc');
         $this->load->view('templetes/footer');
     }
+    public function delete($id){
+        $this->Forum_model->deleteForum($id);
+        $this->session->set_flashdata('forum','deleted');
+        redirect('forum');
+    }
+    public function update($id) {
+        $data['title'] = 'Edit Forum';
+        $this->form_validation->set_rules('title','Title','required');
+        $this->form_validation->set_rules('desc','Description','required');
+        if($this->form_validation->run() == FALSE)  {
+            $this->load->view('templetes/header',$data);
+            $this->load->view('forum/update');
+            $this->load->view('templetes/footer');
+        }else{
+            $this->Forum_model->updateForum($id);
+            $this->session->set_flashdata('forum','Updated');
+            redirect('forum');
+        }
+    }
 }

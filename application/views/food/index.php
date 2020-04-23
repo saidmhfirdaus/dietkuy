@@ -16,7 +16,9 @@
 
         <div class="col-md-6">
             <a href="<?=base_url();  ?>food/add" class = "btn btn-primary">Add Food</a>
+            
         </div>
+        
     </div>
 
 
@@ -44,5 +46,6 @@
                 <?php endforeach; ?>
              </tbody>
             </table>
+            
     </div>
 </div>

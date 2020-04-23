@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -17,6 +18,8 @@
   integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- CSS -->
   <link rel="stylesheet" href="assets/about.css">
+  <link rel="stylesheet" href="assets/slider.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
   <title><?php echo $title; ?></title>
 </head>
@@ -38,6 +41,11 @@
         <a class="nav-item nav-link" href="<?= base_url(); ?>about"style="color: white;">About Us</a>
         <a class="nav-item nav-link" href="<?= base_url(); ?>home/logout"style="color: white">Logout</a>
         
-      </div>
+        
+
+        
+        
+        
+      
     </div>
   </nav>

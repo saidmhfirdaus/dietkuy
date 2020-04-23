@@ -19,7 +19,7 @@
                 <a href="<?= base_url(); ?>profile/update/<?= $user['id'];?>" class="btn btn-primary">Edit Profile</a>
             </div>
             <br>
-        
+            
 
 
         </div>
